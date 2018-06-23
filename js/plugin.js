@@ -41,3 +41,27 @@ let text = new Encryption('some text');
  console.log(text.clearAll());
 
 //3
+function stringClass(value) {
+    this.text = 'value';
+    this.lengthValue = '';
+    this.getValue = function () {
+        return this.text;
+    };
+    this.getLength = function () {
+        this.lengthValue = this.text.length;
+        return this.lengthValue;
+    };
+    this.toString = function () {
+        for (let key in this) {
+            this.text[key] = toString();
+        }
+        return this.text;
+    }    
+}
+
+let str = new stringClass('test');
+console.log(str.getValue());
+console.log(str.getLength());
+//console.log(+str);
+console.log(str.toString());
+
