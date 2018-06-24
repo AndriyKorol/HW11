@@ -16,16 +16,16 @@ console.log(lexus.getYear());
 
 //2
 function Encryption(val) {
-    this.text = val;
-    this.encrypted = '';
+   let text = val,
+       encrypted = '';
     this.origin = function () {
-        return this.text;
+        return text;
     };
     this.enCryption = function () {
-        for (let i = 0; i <= this.text.length; i++) {
-            this.encrypted += String.fromCharCode(i);
+        for (let i = 0; i <= text.length; i++) {
+            encrypted += String.fromCharCode(i);
         }
-        return this.encrypted;
+        return encrypted;
     };
     this.clearAll = function () {
         for (let key in this) {
@@ -56,7 +56,7 @@ function stringClass(value) {
             this.text[key] = toString();
         }
         return this.text;
-    }    
+    }
 }
 
 let str = new stringClass('test');
